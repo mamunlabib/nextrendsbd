@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nextrendsbd.com/sitemap.xml
