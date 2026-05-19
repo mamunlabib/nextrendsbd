@@ -74,20 +74,27 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-wa:hover{background:#16a34a;transform:translateY(-2px)}
 @keyframes pulseGlow{0%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}70%{box-shadow:0 0 0 16px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 
-/* DESCRIPTION + SPECS */
-.detail-section{padding:30px 0}
-.detail-section h2{font-size:1.4rem;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid #0891b2;display:inline-block}
-.detail-section p{color:#334155;margin-bottom:14px}
-.specs-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-top:20px}
-.specs-table td{padding:14px 18px;border-bottom:1px solid #e2e8f0;color:#334155}
-.specs-table td:first-child{font-weight:600;background:#f0f9ff;width:35%;color:#0f172a}
-.specs-table tr:last-child td{border-bottom:none}
-
-.delivery-info{background:#0f172a;color:#fff;padding:28px;border-radius:12px;margin-top:30px;display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:600px){.delivery-info{grid-template-columns:repeat(3,1fr)}}
-.delivery-item{display:flex;flex-direction:column;gap:6px}
-.delivery-item strong{color:#0891b2;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
-.delivery-item span{font-size:.95rem;color:#e2e8f0}
+/* TABS */
+.tabs-section{margin-top:40px}
+.tab-bar{display:flex;background:#fff;border-bottom:1px solid #e2e8f0;overflow-x:auto;border-radius:8px 8px 0 0;-webkit-overflow-scrolling:touch}
+.tab-btn{padding:14px 22px;font-weight:600;font-size:.95rem;color:#475569;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;transition:color .25s ease,border-color .25s ease}
+.tab-btn:hover{color:#0891b2}
+.tab-btn.active{color:#0891b2;border-bottom-color:#0891b2}
+.tab-content{background:#fff;padding:28px;border-radius:0 0 8px 8px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.tab-panel h3{font-size:1.05rem;font-weight:600;color:#0f172a;margin-top:20px;margin-bottom:8px}
+.tab-panel h3:first-child{margin-top:0}
+.tab-panel p{color:#334155;margin-bottom:14px}
+.tab-panel p:last-child{margin-bottom:0}
+.tab-panel ul{padding-left:22px;margin-bottom:14px;color:#334155}
+.tab-panel ul:last-child{margin-bottom:0}
+.tab-panel ul li{margin-bottom:6px}
+.delivery-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:600px){.delivery-grid{grid-template-columns:repeat(2,1fr)}}
+.delivery-row{padding:14px 16px;background:#f0f9ff;border-left:3px solid #0891b2;border-radius:4px}
+.delivery-row strong{display:block;color:#0891b2;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.delivery-row span{color:#334155;font-size:.95rem}
 
 /* RELATED */
 .related{background:#f0f9ff;padding:60px 0 80px}
@@ -187,32 +194,35 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       </div>
     </div>
 
-    <div class="detail-section">
-      <h2>Description</h2>
-      <p>Effortlessly stylish sneakers designed for daily wear. Breathable canvas upper, padded insole, and a durable rubber outsole that grips every surface. The clean, minimalist silhouette pairs with anything from jeans to chinos.</p>
-    </div>
-
-    <div class="detail-section">
-      <h2>Specifications</h2>
-      <table class="specs-table">
-        <tr><td>Category</td><td>Fashion</td></tr>
-        <tr><td>Colors</td><td>White, Black, Beige</td></tr>
-        <tr><td>Material</td><td>Canvas upper, rubber outsole, cotton lining</td></tr>
-      </table>
-    </div>
-
-    <div class="delivery-info">
-      <div class="delivery-item">
-        <strong>Inside Dhaka</strong>
-        <span>৳60 — 1-2 days</span>
+    <div class="tabs-section">
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" data-tab="description" role="tab">Description</button>
+        <button class="tab-btn" data-tab="colors" role="tab">Colors</button>
+        <button class="tab-btn" data-tab="material" role="tab">Material</button>
+        <button class="tab-btn" data-tab="usage" role="tab">Usage</button>
+        <button class="tab-btn" data-tab="delivery" role="tab">Delivery</button>
       </div>
-      <div class="delivery-item">
-        <strong>Outside Dhaka</strong>
-        <span>৳120 — 2-3 days</span>
-      </div>
-      <div class="delivery-item">
-        <strong>Cash on Delivery</strong>
-        <span>&#10003; Available nationwide</span>
+      <div class="tab-content">
+        <div class="tab-panel active" id="tab-description" role="tabpanel">
+          <p>Effortlessly stylish sneakers designed for daily wear. Breathable canvas upper, padded insole, and a durable rubber outsole that grips every surface. The clean, minimalist silhouette pairs with anything from jeans to chinos.</p>
+        </div>
+        <div class="tab-panel" id="tab-colors" role="tabpanel">
+          <p>Available in: <strong>White, Black, Beige</strong></p>
+        </div>
+        <div class="tab-panel" id="tab-material" role="tabpanel">
+          <p>Canvas upper, rubber outsole, cotton lining</p>
+        </div>
+        <div class="tab-panel" id="tab-usage" role="tabpanel">
+          <p>Usage details available on request. Contact us via WhatsApp for guidance specific to this product.</p>
+        </div>
+        <div class="tab-panel" id="tab-delivery" role="tabpanel">
+          <div class="delivery-grid">
+            <div class="delivery-row"><strong>Inside Dhaka</strong><span>৳60 | 1-2 business days</span></div>
+            <div class="delivery-row"><strong>Outside Dhaka</strong><span>৳120 | 2-3 business days</span></div>
+            <div class="delivery-row"><strong>Cash on Delivery</strong><span>Available nationwide</span></div>
+            <div class="delivery-row"><strong>Same-Day Dispatch</strong><span>Orders placed before 5PM are dispatched same day</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -357,6 +367,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape')closeLB();
   if(e.key==='ArrowLeft')navLB(-1);
   if(e.key==='ArrowRight')navLB(1);
+});
+
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const tab=btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id==='tab-'+tab));
+  });
 });
 </script>
 </body>

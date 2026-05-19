@@ -81,23 +81,27 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-wa:hover{background:#16a34a;transform:translateY(-2px)}
 @keyframes pulseGlow{0%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}70%{box-shadow:0 0 0 16px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 
-/* DESCRIPTION + SPECS */
-.detail-section{padding:30px 0}
-.detail-section h2{font-size:1.4rem;font-weight:700;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid #0891b2;display:inline-block}
-.detail-section h3{font-size:1.05rem;font-weight:600;color:#0f172a;margin-top:18px;margin-bottom:8px}
-.detail-section p{color:#334155;margin-bottom:14px}
-.detail-section ul{padding-left:22px;margin-bottom:14px;color:#334155}
-.detail-section ul li{margin-bottom:6px}
-.specs-table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-top:20px}
-.specs-table td{padding:14px 18px;border-bottom:1px solid #e2e8f0;color:#334155}
-.specs-table td:first-child{font-weight:600;background:#f0f9ff;width:35%;color:#0f172a}
-.specs-table tr:last-child td{border-bottom:none}
-
-.delivery-info{background:#0f172a;color:#fff;padding:28px;border-radius:12px;margin-top:30px;display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:600px){.delivery-info{grid-template-columns:repeat(3,1fr)}}
-.delivery-item{display:flex;flex-direction:column;gap:6px}
-.delivery-item strong{color:#0891b2;font-size:.85rem;text-transform:uppercase;letter-spacing:.5px}
-.delivery-item span{font-size:.95rem;color:#e2e8f0}
+/* TABS */
+.tabs-section{margin-top:40px}
+.tab-bar{display:flex;background:#fff;border-bottom:1px solid #e2e8f0;overflow-x:auto;border-radius:8px 8px 0 0;-webkit-overflow-scrolling:touch}
+.tab-btn{padding:14px 22px;font-weight:600;font-size:.95rem;color:#475569;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;transition:color .25s ease,border-color .25s ease}
+.tab-btn:hover{color:#0891b2}
+.tab-btn.active{color:#0891b2;border-bottom-color:#0891b2}
+.tab-content{background:#fff;padding:28px;border-radius:0 0 8px 8px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.tab-panel h3{font-size:1.05rem;font-weight:600;color:#0f172a;margin-top:20px;margin-bottom:8px}
+.tab-panel h3:first-child{margin-top:0}
+.tab-panel p{color:#334155;margin-bottom:14px}
+.tab-panel p:last-child{margin-bottom:0}
+.tab-panel ul{padding-left:22px;margin-bottom:14px;color:#334155}
+.tab-panel ul:last-child{margin-bottom:0}
+.tab-panel ul li{margin-bottom:6px}
+.delivery-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:600px){.delivery-grid{grid-template-columns:repeat(2,1fr)}}
+.delivery-row{padding:14px 16px;background:#f0f9ff;border-left:3px solid #0891b2;border-radius:4px}
+.delivery-row strong{display:block;color:#0891b2;font-size:.82rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.delivery-row span{color:#334155;font-size:.95rem}
 
 /* RELATED */
 .related{background:#f0f9ff;padding:60px 0 80px}
@@ -205,76 +209,84 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
       </div>
     </div>
 
-    <div class="detail-section">
-      <h2>Description</h2>
-      <p>The Hoco E101 is a smart, compact, and reliable solution to keep track of your valuable items. Designed with dual system support, it works seamlessly with both Apple Find My Network and Google Find Hub Network, making it ideal for users in Bangladesh and worldwide.</p>
-
-      <h3>Dual Network Compatibility (Apple &amp; Google)</h3>
-      <ul>
-        <li>Apple Find My Network for iOS users</li>
-        <li>Google Find Hub Network for Android users</li>
-      </ul>
-      <p>This dual compatibility ensures wide device support and accurate location tracking without additional subscription fees.</p>
-
-      <h3>Compact &amp; Lightweight Design</h3>
-      <p>Made from durable ABS material — Size: 32 × 32 × 7mm, Weight: Only 7.5g. Easily attach it to keys, wallets, bags, luggage, pets, or other important belongings.</p>
-
-      <h3>Long Battery Life</h3>
-      <p>Powered by a 210mAh / CR2032 button battery with an impressive 6–8 months of battery life, reducing the hassle of frequent battery replacement.</p>
-
-      <h3>Apple Find My Network Compatibility</h3>
-      <ul>
-        <li>iPhone SE, iPhone 6s and later (iOS 14.5 or above)</li>
-        <li>iPod touch (7th generation)</li>
-        <li>iPad Pro, iPad (5th generation or later)</li>
-        <li>iPad Air 2 or later, iPad mini 4 or later (iPadOS 14.5 or above)</li>
-      </ul>
-
-      <h3>Google Find Hub Network Compatibility</h3>
-      <ul>
-        <li>Works with 90%+ Android phones</li>
-        <li>Requires Android 9 or above with Google services</li>
-        <li>Download "Find Hub" app from Google Play Store</li>
-        <li>Not available in Chinese Mainland, North Korea, Cuba, Iran, Russia, and Ukraine</li>
-      </ul>
-
-      <h3>Key Features</h3>
-      <ul>
-        <li>Dual system support (Apple + Google)</li>
-        <li>Easy-to-find anti-lost tracking</li>
-        <li>Ultra-slim and lightweight design</li>
-        <li>Long-lasting battery (6–8 months)</li>
-        <li>No monthly subscription required</li>
-        <li>Ideal for keys, bags, luggage, and valuables</li>
-      </ul>
-    </div>
-
-    <div class="detail-section">
-      <h2>Specifications</h2>
-      <table class="specs-table">
-        <tr><td>Model</td><td>Hoco E101</td></tr>
-        <tr><td>Type</td><td>Dual Anti-Lost GPS Tracker</td></tr>
-        <tr><td>Material</td><td>ABS</td></tr>
-        <tr><td>Battery</td><td>CR2032 (210mAh)</td></tr>
-        <tr><td>Battery Life</td><td>6–8 months</td></tr>
-        <tr><td>Size</td><td>32 × 32 × 7mm</td></tr>
-        <tr><td>Weight</td><td>7.5g</td></tr>
-        <tr><td>Category</td><td>Accessories</td></tr>
-      </table>
-    </div>
-
-    <div class="delivery-info">
-      <div class="delivery-item">
-        <strong>Inside Dhaka</strong>
-        <span>৳60 — 1-2 days</span>
+    <div class="tabs-section">
+      <div class="tab-bar" role="tablist">
+        <button class="tab-btn active" data-tab="description" role="tab">Description</button>
+        <button class="tab-btn" data-tab="colors" role="tab">Colors</button>
+        <button class="tab-btn" data-tab="material" role="tab">Material</button>
+        <button class="tab-btn" data-tab="usage" role="tab">Usage</button>
+        <button class="tab-btn" data-tab="delivery" role="tab">Delivery</button>
       </div>
-      <div class="delivery-item">
-        <strong>Outside Dhaka</strong>
-        <span>৳120 — 2-3 days</span>
-      </div>
-      <div class="delivery-item">
-        <strong>Cash on Delivery</strong>
-        <span>&#10003; Available nationwide</span>
+      <div class="tab-content">
+        <div class="tab-panel active" id="tab-description" role="tabpanel">
+          <p>The Hoco E101 is a smart, compact, and reliable solution to keep track of your valuable items. Designed with dual system support, it works seamlessly with both Apple Find My Network and Google Find Hub Network, making it ideal for users in Bangladesh and worldwide.</p>
+
+          <h3>Dual Network Compatibility (Apple &amp; Google)</h3>
+          <ul>
+            <li>Apple Find My Network for iOS users</li>
+            <li>Google Find Hub Network for Android users</li>
+          </ul>
+          <p>This dual compatibility ensures wide device support and accurate location tracking without additional subscription fees.</p>
+
+          <h3>Compact &amp; Lightweight Design</h3>
+          <p>Made from durable ABS material — Size: 32 × 32 × 7mm, Weight: Only 7.5g. Easily attach it to keys, wallets, bags, luggage, pets, or other important belongings.</p>
+
+          <h3>Long Battery Life</h3>
+          <p>Powered by a 210mAh / CR2032 button battery with an impressive 6–8 months of battery life, reducing the hassle of frequent battery replacement.</p>
+
+          <h3>Apple Find My Network Compatibility</h3>
+          <ul>
+            <li>iPhone SE, iPhone 6s and later (iOS 14.5 or above)</li>
+            <li>iPod touch (7th generation)</li>
+            <li>iPad Pro, iPad (5th generation or later)</li>
+            <li>iPad Air 2 or later, iPad mini 4 or later (iPadOS 14.5 or above)</li>
+          </ul>
+
+          <h3>Google Find Hub Network Compatibility</h3>
+          <ul>
+            <li>Works with 90%+ Android phones</li>
+            <li>Requires Android 9 or above with Google services</li>
+            <li>Download "Find Hub" app from Google Play Store</li>
+            <li>Not available in Chinese Mainland, North Korea, Cuba, Iran, Russia, and Ukraine</li>
+          </ul>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li>Dual system support (Apple + Google)</li>
+            <li>Easy-to-find anti-lost tracking</li>
+            <li>Ultra-slim and lightweight design</li>
+            <li>Long-lasting battery (6–8 months)</li>
+            <li>No monthly subscription required</li>
+            <li>Ideal for keys, bags, luggage, and valuables</li>
+          </ul>
+        </div>
+        <div class="tab-panel" id="tab-colors" role="tabpanel">
+          <p>Available in: <strong>Black</strong></p>
+        </div>
+        <div class="tab-panel" id="tab-material" role="tabpanel">
+          <h3>Material</h3>
+          <p>ABS Plastic</p>
+          <h3>Build</h3>
+          <p>Premium lightweight construction</p>
+          <h3>Finish</h3>
+          <p>Matte black</p>
+        </div>
+        <div class="tab-panel" id="tab-usage" role="tabpanel">
+          <ul>
+            <li>Attach to keys, wallets, bags, luggage or pet collars</li>
+            <li>Open Apple Find My or Google Find My Device app</li>
+            <li>View real-time location on your phone</li>
+            <li>Replace CR2032 battery every 6-8 months</li>
+          </ul>
+        </div>
+        <div class="tab-panel" id="tab-delivery" role="tabpanel">
+          <div class="delivery-grid">
+            <div class="delivery-row"><strong>Inside Dhaka</strong><span>৳60 | 1-2 business days</span></div>
+            <div class="delivery-row"><strong>Outside Dhaka</strong><span>৳120 | 2-3 business days</span></div>
+            <div class="delivery-row"><strong>Cash on Delivery</strong><span>Available nationwide</span></div>
+            <div class="delivery-row"><strong>Same-Day Dispatch</strong><span>Orders placed before 5PM are dispatched same day</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -426,6 +438,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape')closeLB();
   if(e.key==='ArrowLeft')navLB(-1);
   if(e.key==='ArrowRight')navLB(1);
+});
+
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const tab=btn.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+    document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id==='tab-'+tab));
+  });
 });
 </script>
 </body>
