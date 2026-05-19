@@ -23,40 +23,40 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#0a0a0a;line-height:1.7;overflow-x:hidden}
-a{text-decoration:none;color:#1d4ed8;transition:color .25s ease}
-a:hover{color:#1e40af}
+body{font-family:'Poppins',sans-serif;background:#f0f9ff;color:#0f172a;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:#0891b2;transition:color .25s ease}
+a:hover{color:#0e7490}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 .container{width:100%;max-width:900px;margin:0 auto;padding:0 20px}
 
-.navbar{position:sticky;top:0;left:0;width:100%;background:#0a0a0a;z-index:1000;transition:box-shadow .3s ease}
+.navbar{position:sticky;top:0;left:0;width:100%;background:#0f172a;z-index:1000;transition:box-shadow .3s ease}
 .navbar.scrolled{box-shadow:0 4px 20px rgba(0,0,0,.4)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;max-width:1200px;margin:0 auto}
-.logo{font-size:1.5rem;font-weight:800;color:#1d4ed8;letter-spacing:.5px}
+.logo{font-size:1.5rem;font-weight:800;color:#0891b2;letter-spacing:.5px}
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{color:#fff;font-weight:500;font-size:.95rem}
-.nav-links a:hover{color:#1d4ed8}
+.nav-links a:hover{color:#0891b2}
 .hamburger{display:none;flex-direction:column;gap:5px;padding:6px}
 .hamburger span{width:26px;height:3px;background:#fff;border-radius:2px}
-.mobile-menu{position:fixed;top:0;right:-100%;width:100%;height:100vh;background:#0a0a0a;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;z-index:999;transition:right .35s ease}
+.mobile-menu{position:fixed;top:0;right:-100%;width:100%;height:100vh;background:#0f172a;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;z-index:999;transition:right .35s ease}
 .mobile-menu.open{right:0}
 .mobile-menu a{color:#fff;font-size:1.5rem;font-weight:600}
 .mobile-close{position:absolute;top:24px;right:24px;color:#fff;font-size:2.2rem}
 
-.hero{background:#0a0a0a;color:#fff;text-align:center;padding:70px 20px}
+.hero{background:#0f172a;color:#fff;text-align:center;padding:70px 20px}
 .hero h1{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800}
 .hero p{color:#94a3b8;font-size:.95rem;margin-top:10px}
 
 .content{padding:60px 0 80px}
-.content h2{font-size:1.4rem;font-weight:700;color:#0a0a0a;margin-top:36px;margin-bottom:14px;padding-bottom:10px;border-bottom:3px solid #1d4ed8;display:inline-block}
+.content h2{font-size:1.4rem;font-weight:700;color:#0f172a;margin-top:36px;margin-bottom:14px;padding-bottom:10px;border-bottom:3px solid #0891b2;display:inline-block}
 .content h2:first-of-type{margin-top:0}
 .content p{margin-bottom:14px;color:#334155;font-size:.97rem}
 .content ul{margin-bottom:14px;padding-left:24px;color:#334155}
 .content li{margin-bottom:8px}
-.effective{background:#fff;border-left:4px solid #1d4ed8;padding:16px 20px;margin-bottom:34px;border-radius:6px;color:#0a0a0a;font-size:.92rem}
+.effective{background:#fff;border-left:4px solid #0891b2;padding:16px 20px;margin-bottom:34px;border-radius:6px;color:#0f172a;font-size:.92rem}
 
 /* FOOTER + FLOATING WA */
-.footer{background:#0a0a0a;color:#cbd5e1;padding:60px 0 24px}
+.footer{background:#0f172a;color:#cbd5e1;padding:60px 0 24px}
 .footer-grid{display:grid;grid-template-columns:1fr;gap:32px;margin-bottom:40px;max-width:1200px;margin-left:auto;margin-right:auto;padding:0 20px}
 @media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr}}
 .footer .logo{display:block;margin-bottom:10px}
@@ -65,7 +65,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .footer-links{list-style:none}
 .footer-links li{margin-bottom:10px}
 .footer-links a{color:#cbd5e1;font-size:.9rem}
-.footer-links a:hover{color:#1d4ed8}
+.footer-links a:hover{color:#0891b2}
 .footer-bottom{border-top:1px solid #1f2937;padding-top:24px;text-align:center;font-size:.85rem;color:#94a3b8}
 .float-wa{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(34,197,94,.5);z-index:998;animation:pulseGlow 2.4s infinite}
 .float-wa:hover{transform:scale(1.08)}
