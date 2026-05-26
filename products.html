@@ -82,6 +82,9 @@ section.list{padding:30px 0 80px}
 .btn-wa:hover{background:#16a34a;transform:translateY(-2px)}
 .no-results{text-align:center;padding:60px 20px;color:#64748b;font-size:1.1rem;grid-column:1/-1;display:none}
 .no-results.visible{display:block}
+.coming-soon{margin-top:48px;padding:44px 24px;text-align:center;background:#fff;border-top:3px solid #0891b2;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.coming-soon h3{font-size:1.35rem;font-weight:700;color:#0f172a;margin-bottom:10px}
+.coming-soon p{color:#64748b;font-size:.95rem;max-width:520px;margin:0 auto}
 
 /* FOOTER + FLOATING WA */
 .footer{background:#0f172a;color:#cbd5e1;padding:60px 0 24px}
@@ -139,10 +142,7 @@ section.list{padding:30px 0 80px}
     </div>
     <div class="filters" id="filters">
       <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="electronics">Electronics</button>
-      <button class="filter-btn" data-filter="skincare">Skincare</button>
       <button class="filter-btn" data-filter="home">Home &amp; Living</button>
-      <button class="filter-btn" data-filter="fashion">Fashion</button>
       <button class="filter-btn" data-filter="accessories">Accessories</button>
     </div>
   </div>
@@ -151,6 +151,10 @@ section.list{padding:30px 0 80px}
 <section class="list">
   <div class="container">
     <div class="products-grid" id="grid"></div>
+    <div class="coming-soon">
+      <h3>More products coming soon!</h3>
+      <p>We're constantly curating new international finds. Follow us on Facebook or message us on WhatsApp to be the first to know.</p>
+    </div>
   </div>
 </section>
 
@@ -206,22 +210,7 @@ const WA_SVG='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="
 const products=[
   {id:0,name:"Hoco E101 Smart Finder",desc:"Dual anti-lost GPS tracker — works with Apple Find My and Google Find Hub.",cat:"accessories",img:"https://i.postimg.cc/qvQnVJpQ/hoco-main.webp",price:"৳799",oldPrice:"৳1,500",slug:"hoco-e101-smart-finder",waText:"Hi, I'm interested in the Hoco E101 Smart Finder (GPS Tracker). Please share more details."},
   {id:100,name:"Foldable Sports Water Bottle",desc:"Collapsible silicone bottle with sports ball design — leakproof, foldable, 550ML.",cat:"home",img:"https://i.postimg.cc/Sx4KFvHp/Gemini-Generated-Image-piuv2gpiuv2gpiuv.png",price:"৳449",oldPrice:"৳500",slug:"foldable-sports-water-bottle",waText:"Hi, I'm interested in the Foldable Sports Water Bottle. Please share more details."},
-  {id:101,name:"Travel Neck Pillow",desc:"Manual press auto-inflatable U-shaped neck pillow for flights, trains and long journeys.",cat:"home",img:"https://i.postimg.cc/mrYvjGxx/main-neck-pillow.jpg",price:"৳349",oldPrice:"৳499",slug:"travel-neck-pillow",waText:"Hi, I'm interested in the Travel Neck Pillow. Please share more details."},
-  {id:1,name:"Premium Wireless Earbuds",desc:"Crystal-clear audio with active noise cancellation.",cat:"electronics"},
-  {id:2,name:"Smart Fitness Watch",desc:"Track health, sleep, and activity 24/7.",cat:"electronics"},
-  {id:3,name:"Portable Bluetooth Speaker",desc:"Bold sound on the go with deep bass.",cat:"electronics"},
-  {id:4,name:"Hydrating Vitamin C Serum",desc:"Brightens skin and reduces dark spots.",cat:"skincare"},
-  {id:5,name:"Anti-Aging Night Cream",desc:"Restores skin elasticity while you sleep.",cat:"skincare"},
-  {id:6,name:"Gentle Foaming Cleanser",desc:"Daily cleanse without stripping moisture.",cat:"skincare"},
-  {id:7,name:"Aromatherapy Diffuser",desc:"Bring spa-like calm into your home.",cat:"home"},
-  {id:8,name:"LED Galaxy Projector",desc:"Transform any room into a starry night.",cat:"home"},
-  {id:9,name:"Memory Foam Pillow",desc:"Orthopedic support for the perfect sleep.",cat:"home"},
-  {id:10,name:"Classic Leather Wallet",desc:"Genuine leather, timeless design.",cat:"fashion"},
-  {id:11,name:"Premium Cotton T-Shirt",desc:"Soft, breathable, and beautifully cut.",cat:"fashion"},
-  {id:12,name:"Casual Canvas Sneakers",desc:"Lightweight comfort for every outfit.",cat:"fashion"},
-  {id:13,name:"Polarized Sunglasses",desc:"UV400 protection with a designer finish.",cat:"accessories"},
-  {id:14,name:"Minimalist Wrist Watch",desc:"Elegant, understated, everyday wear.",cat:"accessories"},
-  {id:15,name:"Travel Backpack",desc:"Spacious, durable, and water-resistant.",cat:"accessories"}
+  {id:101,name:"Travel Neck Pillow",desc:"Manual press auto-inflatable U-shaped neck pillow for flights, trains and long journeys.",cat:"home",img:"https://i.postimg.cc/mrYvjGxx/main-neck-pillow.jpg",price:"৳349",oldPrice:"৳499",slug:"travel-neck-pillow",waText:"Hi, I'm interested in the Travel Neck Pillow. Please share more details."}
 ];
 
 const grid=document.getElementById('grid');
